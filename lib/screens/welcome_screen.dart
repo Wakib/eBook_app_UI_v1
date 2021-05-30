@@ -1,7 +1,5 @@
 import 'package:ebook_app_ui_v1/components/rounded_button_widget.dart';
-import 'package:ebook_app_ui_v1/constant.dart';
 import 'package:flutter/material.dart';
-
 import 'home_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
