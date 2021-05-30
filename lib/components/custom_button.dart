@@ -3,10 +3,9 @@ import '../constant.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
-  final double radius;
   final VoidCallback onTap;
 
-  CustomButton({required this.title, this.radius = 30, required this.onTap});
+  CustomButton({required this.title, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +17,10 @@ class CustomButton extends StatelessWidget {
         width: 106,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(radius),
+            topLeft: Radius.circular(30),
             topRight: Radius.circular(0),
             bottomLeft: Radius.circular(0),
-            bottomRight: Radius.circular(radius),
+            bottomRight: Radius.circular(30),
           ),
           color: kBlackColor,
         ),
