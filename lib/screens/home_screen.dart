@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../constant.dart';
+import 'details_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -53,7 +54,16 @@ class HomeScreen extends StatelessWidget {
                       title: 'Crushing & Influence',
                       author: 'Gary Venchuk',
                       rating: 4.5,
-                      pressDetails: () {},
+                      pressDetails: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return DetailsScreen();
+                            },
+                          ),
+                        );
+                      },
                       pressRead: () {},
                     ),
                     ReadingListCard(

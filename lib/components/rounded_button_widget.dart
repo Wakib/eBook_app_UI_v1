@@ -3,9 +3,17 @@ import '../constant.dart';
 
 class RoundedButton extends StatelessWidget {
   final String title;
+  final double verticalPadding;
+  final double horizontalPadding;
+  final double fontSize;
   final VoidCallback press;
 
-  RoundedButton({required this.title, required this.press});
+  RoundedButton(
+      {required this.title,
+      this.verticalPadding = 15,
+      this.horizontalPadding = 60,
+      this.fontSize = 16,
+      required this.press});
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +32,12 @@ class RoundedButton extends StatelessWidget {
           ],
         ),
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 60, vertical: 15),
+          padding: EdgeInsets.symmetric(
+              horizontal: horizontalPadding, vertical: verticalPadding),
           child: Text(
             title,
             style: TextStyle(
-              fontSize: 16,
+              fontSize: fontSize,
               fontWeight: FontWeight.bold,
             ),
           ),
